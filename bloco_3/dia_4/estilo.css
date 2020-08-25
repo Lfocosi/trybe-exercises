@@ -1,0 +1,16 @@
+header {
+
+    background:left/cover url(https://upload.wikimedia.org/wikipedia/commons/3/39/OdontodactylusScyllarus2.jpg);
+    display: flex;
+    align-items: center;
+    height: 300px;
+
+}
+
+header h1 {
+
+    color: beige;
+    position: relative;
+    margin-left: 100px;
+
+}
