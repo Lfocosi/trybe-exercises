@@ -1,91 +1,76 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset=utf-8 />
-<title>Calculator</title>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício - Parte 2</title>
+    <script>
+        window.onload = inicio;
 
-  <label>Square this number:
-    <input type="number" id="square-input" size="2">
-  </label>
-  <button id="square-button">Calculate</button>
-  <br><br>
-  
-  <label>Half this number:
-    <input type="number" id="half-input" size="2">
-  </label>
-  <button id="half-button">Calculate</button>
-  <br><br>
-  
-  <label>
-    Fraction:
-    <input type="number" id="percent1-input" size="2">
-  </label>
-  <label>
-    Whole:
-    <input type="number" id="percent2-input" size="2">
-  </label>
-  <button id="percent-button">Calculate</button>
-  <br><br>
-  
-  <label>Calculate area of circle with radius:
-    <input type="number" id="area-input" size="2">
-  </label>
-  <button id="area-button">Calculate</button> 
-  <br><br>
-  <div id="solution"></div>
-
-  <script>
-      function squareNumber(num) {
-    var squaredNumber = num * num;
-    console.log('The result of squaring the number ' + num + ' is ' + squaredNumber);
-    return squaredNumber;
-    }
-
-    function halfOf(num) {
-        var half = num / 2;
-        console.log('Half of ' + num + ' is ' +  half);
-        return half;
-    }
-
-    function percentOf(num1, num2) {
-        var percent = (num1/num2) * 100;
-        console.log(num1 + ' is ' + percent + '% of ' + num2);
-        return percent;
-    }
-
-    function areaOfCircle(radius) {
-        var area = Math.PI * squareNumber(radius);
-        console.log('The area of circle with radius ' + radius + ' is ' + area);
-        return area;
-    }
+        function inicio() {
+            let botao = document.querySelector('.tarefa1');
+            botao.addEventListener("click", alerta1)
+        }
+        function alerta1() {
+            alert("Você clicou no botão");
+        }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>Exercício - Parte 2</h1>
+      <hr />
+      <h2>Tarefa 1</h2>
+      <p>
+        Adicione um botão HTML na área indicada abaixo. Usando um
+        <strong>EventListener</strong> adicione um evento ao botão, onde ao ser
+        clicado um alerta contendo a mensagem "Você clicou no botão" deverá ser
+        exibido.
+      </p>
+      <div class="tarefa1">Adicione o botão aqui!</div>
+      <hr />
+      <h2>Tarefa 2</h2>
+      <p>
+        Para realizar essa tarefa utilize à tag &lt;script&gt; abaixo. Você deve
+        declarar duas variáveis, uma chamada <strong>productPrice</strong> com o
+        valor <strong>59,99</strong> e a outra chamada
+        <strong>discount</strong> com o valor <strong>0,30</strong>. Na
+        sequência adicione um botão um botão HTML abaixo da tag &lt;script&gt; e
+        utilizando um <strong>EventListener</strong> adicione um evento a esse
+        botão, onde ao ser clicado deve-se multiplicar
+        <strong>productPrice</strong> por <strong>discount</strong> e então
+        exibir um alerta contendo a mensagem "Desconto de R$(resultado)", sendo
+        <strong>discount</strong> o resultado da multiplicação.
+      </p>
+      <button id="bot">Botão</button>
+      <script>
         
-    var squareButton = document.getElementById("square-button");
-    squareButton.addEventListener("click", function() {
-    var num = document.getElementById("square-input").value;
-    document.getElementById("solution").innerHTML = squareNumber(num);
-    });
+        let bota = document.querySelector('#bot');
+        let pice = 59.99;
+        let dis = 0.30;
+        bota.addEventListener("click", alerta2);
         
-    var halfButton = document.getElementById("half-button");
-    halfButton.addEventListener("click", function() {
-    var num = document.getElementById("half-input").value;
-    document.getElementById("solution").innerHTML = halfOf(num);
-    });
-
-    var percentButton = document.getElementById("percent-button");
-    percentButton.addEventListener("click", function() {
-    var num1 = document.getElementById("percent1-input").value;
-    var num2 = document.getElementById("percent2-input").value;
-    document.getElementById("solution").innerHTML = percentOf(num1, num2);
-    });
-        
-
-    var areaButton = document.getElementById("area-button");
-    areaButton.addEventListener("click", function() {
-    var num = document.getElementById("area-input").value;
-    document.getElementById("solution").innerHTML = areaOfCircle(num);
-    });
-  </script>
-</body>
+        function alerta2() {
+            let disconto = pice * dis;
+            alert("Desconto de R$" + disconto);
+        }
+      </script>
+      <hr />
+      <h2>Bônus</h2>
+      <p>
+        Para essa última tarefa você irá precisar de duas imagens do mesmo
+        tamanho. Adicione uma imagem a está página usando uma tag HTML &lt;img
+        /&gt;. Usando os manipuladores de eventos
+        <strong>onMouseOver()</strong> e <strong>onMouseLeave()</strong>, faça com
+        que a imagem mude para a segunda imagem quando o ponteiro do mouse
+        passar sobre ela e, em seguida, voltar para a primeira imagem quando o
+        ponteiro do mouse for movido para fora da imagem.
+      </p>
+      <p>
+        Além disso, sempre que um dos eventos for realizado deve-se logar no
+        console qual dos eventos acabou de ocorrer.
+      </p>
+      <!-- Adicione a tag <img /> aqui -->
+    </div>
+  </body>
 </html>
