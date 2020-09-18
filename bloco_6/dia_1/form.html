@@ -37,10 +37,14 @@
                 </select>
             </div>
             <div>
-                <label for="Casa">Casa</label>
-                <input type="radio" name="Moradia" id="Casa" required>
-                <label for="Apartamento">Apartamento</label>
-                <input type="radio" name="Moradia" id="Apartamento" required>
+                <div class="radio">
+                    <label for="Casa">Casa</label>
+                    <input type="radio" name="Moradia" id="Casa" required>
+                </div>
+                <div class="radio">
+                    <label for="Apartamento">Apartamento</label>
+                    <input type="radio" name="Moradia" id="Apartamento" required>
+                </div>
             </div>
         </fieldset>
         <fieldset>
@@ -56,6 +60,20 @@
             <div>
                 <label for="Descrição">Descrição do cargo:</label>
                 <input type="text" name="Descrição" id="Descrição" maxlength="500" required>
+            </div>
+            <div>
+                <label for="Dia">Dia:</label>
+                <select name="Dia" id="Dia">
+                    <option value="">DD</option>
+                </select>
+                <label for="Mes">Mes:</label>
+                <select name="Mes" id="Mes">
+                    <option value="">MM</option>
+                </select>
+                <label for="Ano">Ano:</label>
+                <select name="Ano" id="Ano">
+                    <option value="">AAAA</option>
+                </select>
             </div>
         </fieldset>
     </form>

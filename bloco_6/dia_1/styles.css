@@ -43,3 +43,10 @@ div {
 fieldset {
     margin-bottom: 20px;
 }
+
+.radio {
+    margin-bottom: 0;
+    display: inline-block;
+    background-color: rgb(180, 255, 255);
+    border-radius: 10%;
+}
