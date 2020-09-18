@@ -9,7 +9,7 @@
 <body>
     <form action="" method="post">
         <fieldset>
-            <legend>Dados Pessoais</legend>
+            <legend>Dados pessoais</legend>
             <div>
                 <label for="Nome">Nome:</label>
                 <input type="text" name="Nome" id="Nome" maxlength="40" required>
@@ -35,6 +35,27 @@
                 <select name="Estado" id="Estado" required>
                     <option value="">selecione seu Estado</option>
                 </select>
+            </div>
+            <div>
+                <label for="Casa">Casa</label>
+                <input type="radio" name="Moradia" id="Casa" required>
+                <label for="Apartamento">Apartamento</label>
+                <input type="radio" name="Moradia" id="Apartamento" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Dados do seu último emprego</legend>
+            <div>
+                <label for="Resumo">Resumo do currículo:</label>
+                <textarea name="Resumo" id="Resumo" cols="60" rows="1" maxlength="1000" required></textarea>
+            </div>
+            <div>
+                <label for="Cargo">Cargo:</label>
+                <input type="text" name="Cargo" id="Cargo" maxlength="40" required>
+            </div>
+            <div>
+                <label for="Descrição">Descrição do cargo:</label>
+                <input type="text" name="Descrição" id="Descrição" maxlength="500" required>
             </div>
         </fieldset>
     </form>
