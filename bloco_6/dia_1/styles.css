@@ -8,8 +8,24 @@ fieldset {
   width: 80%;
 }
 
-input[type="text"] {
-  width: 60%;
+#Nome {
+    width: 40%;
+}
+
+#Email {
+    width: 50%;
+}
+
+#CPF {
+    width: 11%;
+}
+
+#Endereço {
+    width: 50%;
+}
+
+#Cidade {
+    width: 28%;
 }
 
 div {
