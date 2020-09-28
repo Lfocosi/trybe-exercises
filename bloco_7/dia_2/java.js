@@ -17,3 +17,19 @@ const lesson1 = {
     professor: 'Maria Clara',
     turno: 'noite',
   };
+
+  function trocandoValores(objeto, chave, valor) {
+      objeto[chave] = valor;
+  }
+
+  function listachave(objeto) {
+      console.log(Object.keys(objeto));
+  }
+
+  function tamanhoObjeto(objeto) {
+      console.log(Object.keys(objeto).length);
+  }
+
+  function listaValor(objeto) {
+      console.log(Object.values(objeto));
+  }
